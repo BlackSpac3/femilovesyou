@@ -39,7 +39,7 @@ export default function ValentineApp() {
 
   useEffect(() => {
     const timer = requestAnimationFrame(() => {
-      setHearts(generateHearts(20));
+      setHearts(generateHearts(15));
     });
     return () => cancelAnimationFrame(timer);
   }, []);
@@ -352,8 +352,8 @@ export default function ValentineApp() {
 
       <div className="fixed  top-0 w-screen h-screen pointer-events-none z-0">
         <div className="relative w-full h-full">
-          <div className="absolute bg-accent/20 top-1/4 left-1/4 w-64 h-64  rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-pulse delay-700" />
+          <div className="absolute bg-accent/20 top-1/4 left-1/4 size-32 md:size-64  rounded-full blur-[80px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 size-48 md:size-72 bg-accent/20 rounded-full blur-[80px] animate-pulse delay-700" />
           {hearts.map((heart) => (
             <motion.div
               key={heart.id}
